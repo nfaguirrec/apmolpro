@@ -1,0 +1,56 @@
+Instrucciones de instalación
+============================
+
+Previamente es necesario tener instalada la versión
+binaria de APMO, disponible por solicitud a areyesv@bt.unal.edu.co
+y una versión compilada e instalada del código
+fuente de MOLPRO. En plataformas Linux, se descomprime el fichero
+mediante los siguientes comandos
+
+$ tar xvfz apmolpro-2012.tar.gz
+$ cd apmolpro
+$ ls
+apmo.f  apmolpro.com  DT-even-5spd.com  HeTHe-even-5spd.com  onlyapmo.com  README  repNucBasisSet.sh
+ 
+Los pasos a seguir para su instalación son los siguientes:
+
+1. Modificar el fichero molpro2009.1/src/util/driver.f. Desde la línea 594 se deben
+   agregan tres líneas más para llamar a APMO:
+
+   592   if(cmdset.eq.’USER’) then        if(cmdset.eq.’USER’) then
+   593     call user                        call user
+   594     goto 30                          goto 30
+                                          else if(cmdset.eq.’APMO’) then
+                                            call apmo
+                                            goto 30
+
+
+2. Se dispone el fichero de la interfaz a APMO (apmo.f) en el directorio del código
+   fuente de MOLPRO, normalmente molpro2009.1/src/util/
+   
+3. Se registra el comando APMO, agregando la siguiente línea al final del
+   fichero: molpro2009.1/lib/commands.registry
+   
+   {set=commandset,commandset=’APMO’,commands=’APMO’,
+    directives=’UPDATE,FROZEN,SPECIES,NUCBASIS,LOAD,SAVE,CHARGE,MOLDEN’,
+    options=’NONE’}
+
+4. Se compila e instala MOLPRO suponiendo que MOLPRO ya ha sido configurado
+   previamente para la arquitectura local
+   
+   $ make && make install
+   
+5. Se dispone el script repNucBasisSet.sh en algún lugar de la variable $PATH,
+   por ejemplo $HOME/bin. Este script permite la replicación del mismo
+   conjunto de base a todas las especies isotópicas o disponibles en APMO
+   y será internamente llamado por MOLPRO
+   
+   $ cp repNucBasisSet.sh $HOME/bin/
+   
+6. El fichero de la interfaz APMOLPRO (apmolpro.com) se ubican en un lugar
+   arbitrario pero de fácil acceso, por ejemplo,
+   
+   $ cp apmolpro.com $HOME/.apmolpro/
+   
+7. El programa ya está listo para utilizar.
+
