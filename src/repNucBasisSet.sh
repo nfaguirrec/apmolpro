@@ -22,7 +22,7 @@
 #         - Alexander O. Mitrushchenkov                                    #
 #           Alexander.Mitrushchenkov@univ-paris-est.fr                     #
 #         - Maria P. de Lara-Castells                                      #
-#           delara@iff.csic.es                                             #
+#           pilar.delara.castells@csic.es                                  #
 #                                                                          #
 #                            -------------                                 #
 #                                                                          #
