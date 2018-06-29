@@ -18,7 +18,8 @@ hydrogen bonded system; and molecular hydrogen to compare with very accurate non
 Flow diagram of the APMO-MOLPRO interface. 
 ![Terminal](apmolpro.png)
 
-Example of Molpro input file:
+Example of Molpro input file
+----------------------------
 ```
 include apmolpro.com
 APMOLPRO_maxit = 30
@@ -63,13 +64,53 @@ APMOLPRO_cMethod={
 ```
 
 Example of how to specify the electron and nuclear basis set:
+-------------------------------------------------------------
 ```
 basis={
-set ORBITAL
-H=aug-cc-pVQZ
-set NUCBASIS
-s,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
-p,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
-default}
- cartesian
+  set ORBITAL
+  H=aug-cc-pVQZ
+  
+  set NUCBASIS
+  s,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
+  p,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
+  
+  default ORBITAL
+}
+cartesian
+```
+
+Example of how to optimize a nuclear basis set:
+-----------------------------------------------
+```
+c1s = 200.0
+
+basis={
+  set ORBITAL
+  He=aug-cc-pVTZ
+  
+  set NUCBASIS
+  s He c1s
+    c 1.1 1.00000
+    
+  default ORBITAL
+}
+cartesian
+
+r = 2.99773304
+
+symmetry nosym
+angstrom
+geometry={
+  He
+  He 1 r
+}
+
+optBasis={
+  {optg procedure=apmolpro gradient=1e-5
+  }
+}
+
+{minimize energy c1s
+  method energy simplex,varscale=2,thresh=1e-6,proc=optBasis
+}
 ```
