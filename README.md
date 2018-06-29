@@ -16,7 +16,7 @@ weakly bound van der Waals system; isotopomers of \[He–H–He\]<sup>+</sup> mo
 hydrogen bonded system; and molecular hydrogen to compare with very accurate non-Born-Oppenheimer calculations.
 
 Flow diagram of the APMO-MOLPRO interface. 
-![image][apmolpro.png]
+![Terminal](apmolpro.png)
 
 Example of Molpro input file:
 ```
