@@ -114,3 +114,14 @@ optBasis={
   method energy simplex,varscale=2,thresh=1e-6,proc=optBasis
 }
 ```
+
+# Authors
+* Néstor F. Aguirre ( nfaguirrec@unal.edu.co, nfaguirrec@gmail.com ).
+* Ray M. Marín ( rmmarinf@unal.edu.co ).
+* Edgar E. Daza C. ( eedazac@unal.edu.co ).
+
+* Nestor F. Aguirre ( nfaguirrec@unal.edu.co, nfaguirrec@gmail.com ).
+* Edwin F. Posada ( efposadac@unal.edu.co ).
+* Andres Reyes ( areyesv@unal.edu.co ).
+* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr ).
+* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es ).
