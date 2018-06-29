@@ -61,3 +61,15 @@ APMOLPRO_cMethod={
   }
 }
 ```
+
+Example of how to specify the electron and nuclear basis set:
+```
+basis={
+set ORBITAL
+H=aug-cc-pVQZ
+set NUCBASIS
+s,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
+p,H,even,nprim=2,ratio=2.5,centre=33.7,dratio=0.8
+default}
+ cartesian
+```
