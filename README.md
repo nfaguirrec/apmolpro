@@ -116,10 +116,6 @@ optBasis={
 ```
 
 # Authors
-* Néstor F. Aguirre ( nfaguirrec@unal.edu.co, nfaguirrec@gmail.com ).
-* Ray M. Marín ( rmmarinf@unal.edu.co ).
-* Edgar E. Daza C. ( eedazac@unal.edu.co ).
-
 * Nestor F. Aguirre ( nfaguirrec@unal.edu.co, nfaguirrec@gmail.com ).
 * Edwin F. Posada ( efposadac@unal.edu.co ).
 * Andres Reyes ( areyesv@unal.edu.co ).
