@@ -1,7 +1,7 @@
 # APMOLPRO
 
 APMOLPRO is an interface between the [APMO](https://sites.google.com/site/lowdinproject/home)
-(Any Particle Molecular Orbital) code and the electronic structure package (MOLPRO)[https://www.molpro.net/].
+(Any Particle Molecular Orbital) code and the electronic structure package MOLPRO [https://www.molpro.net/].
 The any particle molecular orbital APMO code
 [\[González et al., *Int. J. Quantum Chem.* **108**, 1742 (2008)\]](https://onlinelibrary.wiley.com/doi/abs/10.1002/qua.21584)
 implements the model where electrons and light nuclei are treated simultaneously at Hartree-Fock or
