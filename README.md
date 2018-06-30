@@ -20,6 +20,8 @@ Flow diagram of the APMO-MOLPRO interface.
 
 Specifying the electron and nuclear basis set:
 ----------------------------------------------
+In this example, a basis aug-cc-pVQZ is chosen for the electrons of the hydrogen atoms and a 5sp even-tempered for the hydrogen nuclei.
+
 ```
 basis={
   set ORBITAL
@@ -36,6 +38,7 @@ cartesian
 
 Example of Molpro input file:
 -----------------------------
+
 ```
 include apmolpro.com
 
@@ -142,11 +145,13 @@ geometry={
   orb $APMOLPRO_dm-10.0
 }
 ```
-
+Contour plots of the nuclear density for the different isotopic substitutions of the central hydrogen atom in the system \[HeHHe\]<sup>+</sup>.
 ![Terminal](HeHHe+-density.png)
+
 
 Optimizing a nuclear basis set:
 -------------------------------
+This example shows how to optimize variationally the exponent 1s of the Helium atoms in the He<sub>2</sub> diatomic molecule by using the simplex method (geometry optimization included).
 ```
 c1s = 200.0
 
@@ -180,6 +185,7 @@ optBasis={
   method energy simplex,varscale=2,thresh=1e-6,proc=optBasis
 }
 ```
+Results of the nuclear basis set optimization (even-tempered) at CCSD(T){CCSD}:HF level of theory for the \[HeHHe\]<sup>+</sup> molecule.
 ![Terminal](optimizingBasisSet.png)
 
 # Authors
