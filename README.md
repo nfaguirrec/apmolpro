@@ -143,7 +143,7 @@ geometry={
 }
 ```
 
-![Terminal](optimizingBasisSet.png)
+![Terminal](HeHHe+-density.png)
 
 Optimizing a nuclear basis set:
 -------------------------------
