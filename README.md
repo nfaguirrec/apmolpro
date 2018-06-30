@@ -9,7 +9,7 @@ second-order Möller-Plesset levels of theory. The APMO -MOLPRO interface allows
 level electronic correlation as implemented in the MOLPRO package and to describe nuclear quantum
 effects at Hartree-Fock level of theory with the APMO code.
 
-The examples given In the paper [\[Aguirre et al. *J. Chem. Phys.* **138**, 184113 (2013)\]](http://dx.doi.org/10.1063/1.4803546)
+The examples given in the paper [\[Aguirre et al. *J. Chem. Phys.* **138**, 184113 (2013)\]](http://dx.doi.org/10.1063/1.4803546)
 illustrate the use of this implementation on different model systems: <sup>4</sup>
 He<sub>2</sub> dimer as a protype of a
 weakly bound van der Waals system; isotopomers of \[He–H–He\]<sup>+</sup> molecule as an example of a
@@ -18,8 +18,8 @@ hydrogen bonded system; and molecular hydrogen to compare with very accurate non
 Flow diagram of the APMO-MOLPRO interface. 
 ![Terminal](apmolpro.png)
 
-Example of Molpro input file
-----------------------------
+Example of Molpro input file:
+-----------------------------
 ```
 include apmolpro.com
 APMOLPRO_maxit = 30
@@ -63,8 +63,8 @@ APMOLPRO_cMethod={
 }
 ```
 
-Example of how to specify the electron and nuclear basis set:
--------------------------------------------------------------
+Specifying the electron and nuclear basis set:
+----------------------------------------------
 ```
 basis={
   set ORBITAL
@@ -79,8 +79,8 @@ basis={
 cartesian
 ```
 
-Example of how to optimize a nuclear basis set:
------------------------------------------------
+Optimizing a nuclear basis set:
+-------------------------------
 ```
 c1s = 200.0
 
@@ -114,3 +114,10 @@ optBasis={
   method energy simplex,varscale=2,thresh=1e-6,proc=optBasis
 }
 ```
+
+# Authors
+* Nestor F. Aguirre ( nfaguirrec@gmail.com ).
+* Edwin F. Posada ( efposadac@unal.edu.co ).
+* Andres Reyes ( areyesv@unal.edu.co ).
+* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr ).
+* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es ).
