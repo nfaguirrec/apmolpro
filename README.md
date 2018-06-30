@@ -38,7 +38,7 @@ cartesian
 
 Example of Molpro input file:
 -----------------------------
-This example corresponds to the calculation of the molecule \[HeHHe\]<sup>+</sup> where helium nuclei are represented as punctual particles (DIRAC basis set) and the hydrogen nucleus as a quantum particle represented with an even-tempered basis set. CCSD(T) level of theory is used for the electronic part.
+This example corresponds to the calculation of the molecule \[HeHHe\]<sup>+</sup> where helium nuclei and the hydrogen nucleus are represented as quantum particles with an even-tempered basis set and a single 1s function respectively. CCSD(T)/aug-cc-pVQZ level of theory is used for the electronic part.
 ```
 include apmolpro.com
 
