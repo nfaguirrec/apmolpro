@@ -45,10 +45,10 @@ APMOLPRO_enuc={
 
 APMOLPRO_nrelax={
   {apmo
-  load den EDEN
-  frozen e-
-  species H_1,He_4,He_4
-  nucbasis nucbasis,dirac,dirac
+    load den EDEN
+    frozen e-
+    species H_1,He_4,He_4
+    nucbasis nucbasis,dirac,dirac
   }
 }
 
