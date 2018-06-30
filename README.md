@@ -38,7 +38,7 @@ cartesian
 
 Example of Molpro input file:
 -----------------------------
-
+This example corresponds to the calculation of the molecule \[HeHHe\]<sup>+</sup> where helium nuclei are represented as punctual particles (DIRAC basis set) and the hydrogen nucleus as a quantum particle represented with an even-tempered basis set. CCSD(T) level of theory is used for the electronic part.
 ```
 include apmolpro.com
 
@@ -47,9 +47,7 @@ APMOLPRO_tol = 1e-6
 APMOLPRO_hforb = 2100.2
 APMOLPRO_dm = 21400.2
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! First call to APMO to build the nuclear wave function
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 APMOLPRO_begin={
   {apmo
     species H_1,He_4,He_4
@@ -60,18 +58,14 @@ APMOLPRO_begin={
   }
 }
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Updating the nuclear energy including the kinetic energy from the nuclei
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 APMOLPRO_enuc={
   {apmo
     update enuc H_1
   }
 }
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Lets to relax the nuclei keeping frozen the electrons
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 APMOLPRO_nrelax={
   {apmo
     load den EDEN
@@ -81,17 +75,13 @@ APMOLPRO_nrelax={
   }
 }
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Electronic method to use
-!!!!!!!!!!!!!!!!!!!!!!!!!!!
 APMOLPRO_eMethod={
   ccsd(t)
 }
 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 ! Nuclear-electron interaction method through the
 ! first-order reduced density matrix (record=21400.2)
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 APMOLPRO_cMethod={
   {ccsd
     core 0
@@ -189,8 +179,8 @@ Results of the nuclear basis set optimization (even-tempered) at CCSD(T){CCSD}:H
 ![Terminal](optimizingBasisSet.png)
 
 # Authors
-* Nestor F. Aguirre ( nfaguirrec@gmail.com ).
-* Edwin F. Posada ( efposadac@unal.edu.co ).
-* Andres Reyes ( areyesv@unal.edu.co ).
-* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr ).
-* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es ).
+* Nestor F. Aguirre ( nfaguirrec@gmail.com )
+* Edwin F. Posada ( efposadac@unal.edu.co )
+* Andres Reyes ( areyesv@unal.edu.co )
+* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr )
+* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es )
