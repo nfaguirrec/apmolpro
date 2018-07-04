@@ -22,6 +22,12 @@ hydrogen bonded system; and molecular hydrogen to compare with very accurate non
 * Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr )
 * Maria P. de Lara-Castells ( pilar.delara.castells@csic.es )
 
+## Citing
+
+To cite the code, please proceed as follows:
+
+[![DOI](https://zenodo.org/badge/117063060.svg)](https://zenodo.org/badge/latestdoi/117063060)
+
 ## Flow diagram of the APMO-MOLPRO interface. 
 ![Terminal](apmolpro.png)
 
