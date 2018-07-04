@@ -9,6 +9,13 @@ second-order Möller-Plesset levels of theory. The APMO -MOLPRO interface allows
 level electronic correlation as implemented in the MOLPRO package and to describe nuclear quantum
 effects at Hartree-Fock level of theory with the APMO code.
 
+## Authors
+* Nestor F. Aguirre ( nfaguirrec@gmail.com )
+* Edwin F. Posada ( efposadac@unal.edu.co )
+* Andres Reyes ( areyesv@unal.edu.co )
+* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr )
+* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es )
+
 The examples given in the paper [\[Aguirre et al. *J. Chem. Phys.* **138**, 184113 (2013)\]](http://dx.doi.org/10.1063/1.4803546)
 illustrate the use of this implementation on different model systems: <sup>4</sup>
 He<sub>2</sub> dimer as a protype of a
@@ -178,9 +185,3 @@ optBasis={
 Results of the nuclear basis set optimization (even-tempered) at CCSD(T){CCSD}:HF level of theory for the \[HeHHe\]<sup>+</sup> molecule.
 ![Terminal](optimizingBasisSet.png)
 
-# Authors
-* Nestor F. Aguirre ( nfaguirrec@gmail.com )
-* Edwin F. Posada ( efposadac@unal.edu.co )
-* Andres Reyes ( areyesv@unal.edu.co )
-* Alexander O. Mitrushchenkov ( Alexander.Mitrushchenkov@univ-paris-est.fr )
-* Maria P. de Lara-Castells ( pilar.delara.castells@csic.es )
